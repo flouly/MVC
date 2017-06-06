@@ -1,0 +1,10 @@
+# activation dela reecriture d URL (FAIT PAR APACHE)
+RewriteEngine on
+
+# Si on appelle unfichier qui n existe pas....
+RewriteCond %{REQUEST_FILENAME} !-f
+#...alors on redirige vers index.php
+RewriteRule ^ index.php [QSA,L]
+
+# on redirige toute les urls vers l index du dossier web
+
